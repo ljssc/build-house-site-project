@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+
+    <link rel="stylesheet" href="src/normalize.css">
+    <link rel="stylesheet" href="src/projects.css">
+    <script src="src/projects.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1 class="page-title">Все проекты домов</h1>
+    </div>
+</header>
+
+<section class="projects">
+    <div class="container projects__container">
+
+       
+        <aside class="filters">
+
+            <h2>Фильтры</h2>
+
+            <div class="filter-group">
+                <label>Площадь (м²)</label>
+                <div class="range">
+                    <input type="number" id="areaMin" placeholder="от">
+                    <input type="number" id="areaMax" placeholder="до">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Этажность</label>
+                <select id="floors">
+                    <option value="">Любая</option>
+                    <option value="1">1 этаж</option>
+                    <option value="2">2 этажа</option>
+                    <option value="3">3 этажа</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Материал</label>
+                <select id="material">
+                    <option value="">Любой</option>
+                    <option value="дерево">Дерево</option>
+                    <option value="кирпич">Кирпич</option>
+                    <option value="газобетон">Газобетон</option>
+                    <option value="каркас">Каркас</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Стиль</label>
+                <select id="style">
+                    <option value="">Любой</option>
+                    <option value="modern">Современный</option>
+                    <option value="classic">Классический</option>
+                    <option value="barnhouse">Barnhouse</option>
+                    <option value="chalet">Шале</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Сортировка</label>
+                <select id="sort">
+                    <option value="">По умолчанию</option>
+                    <option value="priceAsc">Цена ↑</option>
+                    <option value="priceDesc">Цена ↓</option>
+                    <option value="areaAsc">Площадь ↑</option>
+                    <option value="areaDesc">Площадь ↓</option>
+                </select>
+            </div>
+            <button id="resetFilters" class="reset-btn">Сбросить</button>
+        </aside>
+        <div class="projects__list" id="projectsList">  
+        </div>
+    </div>
+</section>
+</body>
+</html>

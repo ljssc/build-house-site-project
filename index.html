@@ -19,7 +19,7 @@
             </div>
             <nav class="header__nav">
                 <a href="#">Компания</a>
-                <a href="#">Проекты</a>
+                <a href="project.html">Проекты</a>
                 <a href="#">Дома</a>
                 <a href="#">Коммерция</a>
                 <a href="#">Акции</a>
@@ -33,7 +33,7 @@
     <div class="mobile-menu">
         <nav>
             <a href="#">Компания</a>
-            <a href="#">Проекты</a>
+            <a href="project.html">Проекты</a>
             <a href="#">Дома</a>
             <a href="#">Коммерция</a>
             <a href="#">Акции</a>
@@ -53,47 +53,35 @@
                 </div>
             </div>
         </section>
-
         <section class="solutions">
             <div class="container">
                 <h2 class="solutions__title">Наши готовые решения</h2>
                 <div class="solutions__wrapper">
-                    <div class="solutions__slider">
-                        <div class="slide active">
-                            <img src="src/img/Subtract.png" alt="">
+                    <div class="solutions__left">
+                        <button class="slider-arrow left-arrow">‹</button>
+                        <div class="solutions__image-wrapper">
+                            <img src="src/img/Subtract.png" alt="" class="solution-image active" data-index="0">
+                            <img src="src/img/substract2.jpg" alt="" class="solution-image" data-index="1">
+                            <img src="src/img/substract3.jpg" alt="" class="solution-image" data-index="2">
                         </div>
-                        <div class="slide">
-                            <img src="src/img/substract2.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="src/img/substract3.jpg" alt="">
-                        </div>
-                        <button class="slider-btn prev">‹</button>
-                        <button class="slider-btn next">›</button>
+                        <button class="slider-arrow right-arrow">›</button>
+                        <div class="solutions__label">«Лесной Уголок»</div>
                     </div>
-                    <div class="solutions__info">
-                        <div class="solutions__items">
-
-                            <div class="solution-item active" data-index="0">
-                                <h3>"Лесной Уголок"</h3>
-                                <p>Ваш уют в сердце природы</p>
-                            </div>
-
-                            <div class="solution-item" data-index="1">
-                                <h3>«Контраст»</h3>
-                                <p>Где бетон встречается с природой</p>
-                            </div>
-
-                            <div class="solution-item" data-index="2">
-                                <h3>"Дом Света"</h3>
-                                <p>Где каждый луч — приглашение остаться.</p>
-                            </div>
-
+                    <div class="solutions__right">
+                        <div class="solution-item active" data-index="0">
+                            <h3>«Лесной Уголок»</h3>
+                            <p>Ваш уют в сердце природы</p>
                         </div>
-
-                        <button class="solutions__btn">К ПОДБОРУ -></button>
+                        <div class="solution-item" data-index="1">
+                            <h3>«Контраст»</h3>
+                            <p>Где бетон встречается с природой</p>
+                        </div>
+                        <div class="solution-item" data-index="2">
+                            <h3>«Дом Света»</h3>
+                            <p>Где каждый луч — приглашение остаться.</p>
+                        </div>
+                        <button class="solutions__btn">К ПОДБОРУ →</button>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -308,6 +296,29 @@
             </div>
         </section>
     </footer>
+    <div class="modal" id="houseModal">
+    <div class="modal__content">
+        <button class="modal__close">×</button>
+
+        <div class="modal__image-block">
+            <img src="src/img/Subtract.png" class="modal__image" id="modalImage" alt="">
+        </div>
+
+        <div class="modal__info">
+            <h2 id="modalTitle">Название проекта</h2>
+            <p id="modalDesc">Описание проекта</p>
+
+            <ul class="modal__list" id="modalParams">
+                <li>Площадь: 120 м²</li>
+                <li>Этажей: 2</li>
+                <li>Материал: Брус</li>
+                <li>Гарантия: 5 лет</li>
+            </ul>
+        </div>
+
+        <button class="modal__request-btn">Оставить заявку →</button>
+    </div>
+</div>
 </body>
 
 </html>
