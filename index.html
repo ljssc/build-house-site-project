@@ -13,82 +13,157 @@
 
 <body>
     <header class="header">
-        <section class="section section-header">
-            <div class="container header-container">
-                <img src="src/img/PD-logo-1E2A38-56x56.png" alt="" class="logo">
-                <nav class="nav">
-                    <a href="#">Компания</a>
-                    <a href="#">Проекты</a>
-                    <a href="#">Дома</a>
-                    <a href="#">Коммерция</a>
-                    <a href="#">Акции</a>
-                </nav>
-                <div class="phone-wrap">
-                    <div class="divider"></div>
-                    <p class="phone">+7 (966) 788-14-87</p>
-                </div>
+        <div class="container header__inner">
+            <div class="header__logo">
+                <img src="src/img/PD-logo-1E2A38-56x56.png" alt="Logo">
             </div>
-        </section>
+            <nav class="header__nav">
+                <a href="#">Компания</a>
+                <a href="#">Проекты</a>
+                <a href="#">Дома</a>
+                <a href="#">Коммерция</a>
+                <a href="#">Акции</a>
+            </nav>
+            <div class="header__phone">+7 (966) 788-14-87</div>
+            <div class="burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
     </header>
+    <div class="mobile-menu">
+        <nav>
+            <a href="#">Компания</a>
+            <a href="#">Проекты</a>
+            <a href="#">Дома</a>
+            <a href="#">Коммерция</a>
+            <a href="#">Акции</a>
+        </nav>
+        <div class="mobile-phone">+7 (966) 788-14-87</div>
+    </div>
     <main>
-        <section class="section head-info">
-            <div class="container head-grid">
-                <div class="head-text">
-                    <h1>ПОСТРОИТЬ<br> ДОМ</h1>
-                    <p class="subtitle">Строительство домой по всей<br> Волгоградской Области</p>
+        <section class="hero">
+            <div class="container hero__grid">
+                <div class="hero__info">
+                    <h1>ПОСТРОИТЬ<br>ДОМ</h1>
+                    <p class="hero__subtitle">Строительство домов по всей<br>Волгоградской области</p>
+                    <div class="hero__line"></div>
                 </div>
-                <img src="src/img/postrroithome.png" alt="">
-            </div>
-        </section>
-        <section class="section ready-solutions">
-            <div class="container ready-solutions-grid">
-                <div class="slider-block">
-                    <div class="slider-wrapper">
-                        <button class="slide-btn left" id="slideLeft">&#10094;</button>
-                        <div class="slider">
-                            <img id="slideImage" src="src/img/Subtract.png" alt="" class="slide-img">
-                        </div>
-                        <button class="slide-btn right" id="slideRight">&#10095;</button>
-                    </div>
-                    <p class="slide-title">«Лесной Уголок»</p>
-                </div>
-                <div class="solutions-info">
-                    <div class="solution-item active" data-id="0">
-                        <h3>«Лесной Уголок»</h3>
-                        <p>Ваш уют в сердце природы</p>
-                    </div>
-                    <div class="solution-item" data-id="1">
-                        <h3>«Контраст»</h3>
-                        <p>Где бетон встречается с природой</p>
-                    </div>
-                    <div class="solution-item" data-id="2">
-                        <h3>«Дом Света»</h3>
-                        <p>Где каждый луч — приглашение остаться.</p>
-                    </div>
-                    <button class="select-btn">К ПОДБОРУ →</button>
+                <div class="hero__image">
+                    <img src="src/img/image 23.png" alt="Дом">
                 </div>
             </div>
         </section>
-        <section class="section chart-section">
+
+        <section class="solutions">
             <div class="container">
-                <h2>СТАБИЛЬНО СДАЕМ РАНЬШЕ СРОКА</h2>
-                <p class="chart-sub">Динамика опережения срока сдачи домов</p>
-                <div id="chartTooltip" class="chart-tooltip"></div>
+                <h2 class="solutions__title">Наши готовые решения</h2>
+                <div class="solutions__wrapper">
+                    <div class="solutions__slider">
+                        <div class="slide active">
+                            <img src="src/img/Subtract.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="src/img/substract2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="src/img/substract3.jpg" alt="">
+                        </div>
+                        <button class="slider-btn prev">‹</button>
+                        <button class="slider-btn next">›</button>
+                    </div>
+                    <div class="solutions__info">
+                        <div class="solutions__items">
+
+                            <div class="solution-item active" data-index="0">
+                                <h3>"Лесной Уголок"</h3>
+                                <p>Ваш уют в сердце природы</p>
+                            </div>
+
+                            <div class="solution-item" data-index="1">
+                                <h3>«Контраст»</h3>
+                                <p>Где бетон встречается с природой</p>
+                            </div>
+
+                            <div class="solution-item" data-index="2">
+                                <h3>"Дом Света"</h3>
+                                <p>Где каждый луч — приглашение остаться.</p>
+                            </div>
+
+                        </div>
+
+                        <button class="solutions__btn">К ПОДБОРУ -></button>
+                    </div>
+
+                </div>
             </div>
         </section>
+
+        <section class="stats">
+            <div class="container stats__wrapper">
+
+                <div class="stats__info">
+                    <h2>Стабильно сдаём<br>раньше срока</h2>
+                    <p>98% наших проектов мы сдаем не просто вовремя —<br>
+                        а раньше заявленного срока.</p>
+                    <p>Мы соблюдаем стандарты качества и строго следим за<br>
+                        графиком, чтобы вы могли въехать в дом точно в срок.</p>
+                </div>
+
+                <div class="stats__chart">
+                    <div class="chart-grid"></div>
+
+                    <div class="chart-bars">
+                        <div class="bar" data-value="60">
+                            <div class="bar-fill"></div>
+                            <span>Янв</span>
+                        </div>
+
+                        <div class="bar" data-value="50">
+                            <div class="bar-fill"></div>
+                            <span>Фев</span>
+                        </div>
+
+                        <div class="bar" data-value="88">
+                            <div class="bar-fill"></div>
+                            <span>Мар</span>
+                        </div>
+
+                        <div class="bar" data-value="100">
+                            <div class="bar-fill"></div>
+                            <span>Апр</span>
+                        </div>
+
+                        <div class="bar" data-value="92">
+                            <div class="bar-fill"></div>
+                            <span>Май</span>
+                        </div>
+
+                        <div class="bar" data-value="97">
+                            <div class="bar-fill"></div>
+                            <span>Июн</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="section section-separation">
             <div class="container con-sep"></div>
         </section>
+
         <section class="section section-video-contact">
             <div class="container">
                 section-video-contact
             </div>
         </section>
+
         <section class="section section-purchase-methods">
             <div class="container">
                 section-purchase-methods
             </div>
         </section>
+
         <section class="section section-reviews">
             <div class="container con-reviews">
                 <div class="con-reviews-h2">

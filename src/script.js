@@ -1,44 +1,57 @@
-const images = [
-    "src/img/Subtract.png",
-    "src/img/substract2.jpg",
-    "src/img/substract3.jpg"
-];
+const burger = document.querySelector(".burger");
+
+const mobileMenu = document.querySelector(".mobile-menu");
 
 
-const titles = [
-    "«Лесной Уголок»",
-    "«Контраст»",
-    "«Дом Света»"
-];
-
+const slides = document.querySelectorAll(".slide");
 const items = document.querySelectorAll(".solution-item");
-const slideImage = document.getElementById("slideImage");
-const slideTitle = document.querySelector(".slide-title");
+const btnPrev = document.querySelector(".prev");
+const btnNext = document.querySelector(".next");
 
-let currentSlide = 0;
+const bars = document.querySelectorAll(".bar");
 
-function updateSlide(index) {
-    currentSlide = index;
-    slideImage.src = images[index];
-    slideTitle.textContent = titles[index];
 
-    items.forEach(item => item.classList.remove("active"));
-    items[index].classList.add("active");
+burger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+});
+
+let index = 0;
+
+function updateSlider(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    items.forEach(s => s.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    items[i].classList.add("active");
+
+    index = i;
 }
 
-document.getElementById("slideLeft").onclick = () => {
-    currentSlide = (currentSlide - 1 + images.length) % images.length;
-    updateSlide(currentSlide);
+btnNext.onclick = () => {
+    let i = index + 1;
+    if (i >= slides.length) i = 0;
+    updateSlider(i);
 };
 
-document.getElementById("slideRight").onclick = () => {
-    currentSlide = (currentSlide + 1) % images.length;
-    updateSlide(currentSlide);
+btnPrev.onclick = () => {
+    let i = index - 1;
+    if (i < 0) i = slides.length - 1;
+    updateSlider(i);
 };
 
 items.forEach(item => {
     item.onclick = () => {
-        const id = parseInt(item.getAttribute("data-id"));
-        updateSlide(id);
+        updateSlider(+item.dataset.index);
     };
 });
+
+
+bars.forEach(bar => {
+    const value = bar.dataset.value;
+    const fill = bar.querySelector(".bar-fill");
+
+    setTimeout(() => {
+        fill.style.height = value + "%";
+    }, 200);
+});
+console.log("bars:", bars);
