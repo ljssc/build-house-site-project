@@ -143,3 +143,13 @@ bars.forEach(bar => {
     }, 200);
 });
 console.log("bars:", bars);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heroImg = document.querySelector(".hero__image img");
+
+  if (heroImg) {
+    setTimeout(() => {
+      heroImg.classList.add("show");
+    }, 200); 
+  }
+});
